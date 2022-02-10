@@ -12,10 +12,10 @@ import com.app.storageapp.models.Car
 import com.app.storageapp.recyclerview.ItemAdapter
 import com.app.storageapp.settings.SettingsActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ItemAdapter.OnItemClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private val listAdapter = ItemAdapter()
+    private val listAdapter = ItemAdapter(this)
     private val list = mutableListOf(
         Car(1, "Honda", 1994, "NSX-S"),
         Car(2, "Honda", 1995, "NSX"),
@@ -82,4 +82,9 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.title = "Cars"
     }
 
+    override fun onItemClick(position: Int) {
+        val data = list[position].BuildDataString()
+        val detailFragment = DetailFragment.newInstance(data)
+        detailFragment.show(supportFragmentManager, null)
+    }
 }

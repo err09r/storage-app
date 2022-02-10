@@ -17,7 +17,7 @@
         app:boxCornerRadiusBottomStart="@dimen/view_corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/view_corner_radius"
         app:boxCornerRadiusTopStart="@dimen/view_corner_radius"
-        app:helperText="Enter producer name">
+        app:helperText="Producer name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_producer"
@@ -36,7 +36,7 @@
         app:boxCornerRadiusBottomStart="@dimen/view_corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/view_corner_radius"
         app:boxCornerRadiusTopStart="@dimen/view_corner_radius"
-        app:helperText="Enter year of car production">
+        app:helperText="Year of car production">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_year"
@@ -57,7 +57,7 @@
         app:boxCornerRadiusBottomStart="@dimen/view_corner_radius"
         app:boxCornerRadiusTopEnd="@dimen/view_corner_radius"
         app:boxCornerRadiusTopStart="@dimen/view_corner_radius"
-        app:helperText="Enter full model name">
+        app:helperText="Full model name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_model"
@@ -67,12 +67,26 @@
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_add"
+    <LinearLayout
         android:layout_width="@dimen/view_fragment_width"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Add car"
-        app:cornerRadius="@dimen/view_corner_radius" />
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            app:cornerRadius="@dimen/view_corner_radius" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:cornerRadius="@dimen/view_corner_radius" />
+
+    </LinearLayout>
 
 </LinearLayout>

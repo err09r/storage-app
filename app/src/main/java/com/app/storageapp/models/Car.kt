@@ -17,4 +17,8 @@ data class Car(
 
     @ColumnInfo(name = "model")
     val model: String
-)
+) {
+    fun BuildDataString(): String {
+        return "$producer/$year/$model"
+    }
+}

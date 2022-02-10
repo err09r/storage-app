@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.app.storageapp.R
 import com.app.storageapp.databinding.ActivityFilterBinding
-import com.app.storageapp.settings.SettingsFragment
 
 class FilterActivity: AppCompatActivity() {
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fragment_height">400dp</dimen>
+    <dimen name="fragment_width">280dp</dimen>
+    <dimen name="view_fragment_width">200dp</dimen>
+    <dimen name="view_corner_radius">32dp</dimen>
+</resources>
