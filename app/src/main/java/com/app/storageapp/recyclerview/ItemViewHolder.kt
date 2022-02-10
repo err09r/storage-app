@@ -12,6 +12,5 @@ class ItemViewHolder(private val binding: ItemBinding): RecyclerView.ViewHolder(
         binding.textView4.text = car.producer
         binding.textView5.text = car.year.toString()
         binding.textView6.text = car.model
-
     }
 }

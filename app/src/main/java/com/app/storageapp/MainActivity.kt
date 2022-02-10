@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.storageapp.databinding.ActivityMainBinding
 import com.app.storageapp.filtersettings.FilterActivity
 import com.app.storageapp.models.Car
 import com.app.storageapp.recyclerview.ItemAdapter
 import com.app.storageapp.settings.SettingsActivity
-import com.app.storageapp.settings.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         val fm = supportFragmentManager
         if (fm.backStackEntryCount > 0) {
             fm.popBackStack()
-            binding.buttonAdd.isVisible = true
         } else {
             super.onBackPressed();
         }
@@ -73,12 +70,9 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.buttonAdd.setOnClickListener {
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fragment_container, AddFragment())
-                .addToBackStack(null)
-                .commit()
-            it.isVisible = false
+            val addFragment = AddFragment()
+            //addFragment.setFragmentResultListener()
+            addFragment.show(supportFragmentManager, null)
         }
     }
 
