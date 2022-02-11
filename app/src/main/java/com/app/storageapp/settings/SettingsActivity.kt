@@ -31,7 +31,7 @@ class SettingsActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarSettings.root)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            title = "Settings"
+            title = getString(R.string.text_screen_settings)
         }
     }
 }

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ListPreference
-        android:defaultValue="false"
-        android:entries="@array/filter_data"
-        android:entryValues="@array/filter_values"
+        android:defaultValue="0"
+        android:entries="@array/sort_data"
+        android:entryValues="@array/sort_values"
         android:icon="@drawable/ic_sort"
-        android:key="list"
-        android:summary="Select the option to filter by"
-        android:title="Filter by" />
+        android:key="@string/filter_list_key"
+        android:summary="@string/filter_list_summary"
+        android:title="@string/filter_list_title" />
 
 </PreferenceScreen>

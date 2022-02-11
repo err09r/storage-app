@@ -3,11 +3,12 @@ package com.app.storageapp.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
-@Entity
+@Entity(tableName = "cars")
 data class Car(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int = 0,
 
     @ColumnInfo(name = "producer")
     val producer: String,
@@ -17,8 +18,4 @@ data class Car(
 
     @ColumnInfo(name = "model")
     val model: String
-) {
-    fun BuildDataString(): String {
-        return "$producer/$year/$model"
-    }
-}
+) : Serializable

@@ -31,7 +31,7 @@ class FilterActivity: AppCompatActivity() {
         setSupportActionBar(binding.toolbarFilter.root)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
-            title = "Filter"
+            title = getString(R.string.text_screen_sort)
         }
     }
 }
